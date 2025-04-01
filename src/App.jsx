@@ -55,7 +55,7 @@ function App() {
         <h1>Select Location</h1>
         <div style={{display:'flex',flexDirection:'row',justifyContent:'space-between',gap:'10px'}}>
         <select  onChange={handleSelectCountry}>
-            <option value="" disabled>Select Country</option>
+            <option value="" disabled selected>Select Country</option>
                 {countries.map((country) => (
                        <option value={country} key={country}>{country}</option>
                        
@@ -63,7 +63,7 @@ function App() {
              
             </select>
           <select  onChange={handleSelectState} disabled={selectedCountry === ''}>
-          <option value="" disabled> Select State</option>
+          <option value="" disabled selected> Select State</option>
                 {states.map((state,index) => (
                        <option value={state} key={index}>{state}</option>
                        
@@ -72,7 +72,7 @@ function App() {
             </select>
 
             <select  onChange={handleSelectCity} disabled={selectedCountry === '' || selectedState === ''}>
-            <option value="" disabled>Select City</option>
+            <option value="" disabled selected>Select City</option>
                 {cities.map((city,index) => (
                        <option value={city} key={index}>{city}</option>
                        
@@ -80,7 +80,7 @@ function App() {
              
             </select>
         </div>
-      {selectedCountry && selectedCity && selectedState &&  <div> <h3>You Selected <span style={{fontSize:'40px'}}>{selectedCountry}</span>, <span style={{fontSize:"30px",color:"grey"}}>{selectedState}, {selectedCity}</span></h3></div>}
+      {selectedCountry && selectedCity && selectedState &&  <div> <span><h3>You Selected <span style={{fontSize:'40px'}}>{selectedCountry}</span>, <span style={{fontSize:"30px",color:"grey"}}>{selectedState}, {selectedCity}</span></h3></span></div>}
       </div>
     </>
   )
