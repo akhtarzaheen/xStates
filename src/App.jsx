@@ -80,7 +80,7 @@ function App() {
              
             </select>
         </div>
-      {selectedCountry && selectedCity && selectedState &&  <div> <span><h3>You selected <span style={{fontSize:'40px'}}>{selectedCountry}</span>, <span style={{fontSize:"30px",color:"grey"}}>{selectedState}, {selectedCity}</span></h3></span></div>}
+      {selectedCountry && selectedCity && selectedState &&   <span><h3>You selected <span style={{fontSize:'40px'}}>{selectedCountry}</span>, <span style={{fontSize:"30px",color:"grey"}}>{selectedState}, {selectedCity}</span></h3></span>}
       </div>
     </>
   )
